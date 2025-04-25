@@ -337,10 +337,9 @@ Kesimpulan:
 #### 4. **F1 Score**
 
 **F1-score** adalah harmonisasi antara precision dan recall, terutama digunakan ketika distribusi data tidak seimbang.
+
 $$
-\[
 \text{F1-score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
-\]
 $$
 
 ### Hasil Evaluasi Model
