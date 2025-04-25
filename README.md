@@ -124,6 +124,8 @@ Pada tahap ini dilakukan beberapa proses persiapan data sebelum digunakan dalam 
 
 ### Encoding Fitur Kategorikal
 ```
+df_score_enc = df_score.copy()
+
 education_categories = [
     'some high school',
     'high school',
@@ -132,11 +134,38 @@ education_categories = [
     'bachelor\'s degree',
     'master\'s degree'
 ]
+
 oe = OrdinalEncoder(categories=[education_categories])
 df_score_enc['parental level of education'] = oe.fit_transform(df_score_enc[['parental level of education']])
-df_score_enc = pd.get_dummies(df_score_enc, columns=['gender', 'race/ethnicity', 'lunch', 'test preparation course'])
+
+df_score_enc = pd.get_dummies(df_score_enc, columns=[
+    'gender',
+    'race/ethnicity',
+    'lunch',
+    'test preparation course'
+])
 ```
+
 **Ordinal Encoding** diterapkan pada kolom `parental level of education` karena memiliki sifat ordinal, di mana tingkat pendidikan dapat diasumsikan memiliki urutan tertentu. Sementara itu, kolom-kolom seperti `gender`, `race/ethnicity`, `lunch`, dan `test preparation course` dikonversi menggunakan **One-Hot Encoding** karena bersifat nominal atau tidak memiliki urutan. Hasil encoding ini memungkinkan seluruh fitur kategorikal diubah ke dalam format numerik yang sesuai untuk proses modeling.
+
+### Transformasi Target Variabel
+```
+df_score_enc['reading_cat'] = pd.cut(
+    df_score_enc['reading score'],
+    bins=[0, 60, 80, 100],
+    labels=['Low', 'Medium', 'High']
+)
+
+
+le = LabelEncoder()
+df_score_enc['reading_cat'] = le.fit_transform(df_score_enc['reading_cat'])
+
+```
+
+Variabel `reading_cat` merupakan hasil kategorisasi dari nilai `reading score` pada dataset. Nilai ini diklasifikasikan ke dalam tiga kategori berdasarkan rentang skor sebagai berikut:
+* Low: **Nilai `0 ≤ score ≤ 60`**
+* Medium: **Nilai `60 < score ≤ 80`**
+* High: **Nilai `80 < score ≤ 100`**
 
 ## Modeling
 Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
