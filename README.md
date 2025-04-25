@@ -120,11 +120,23 @@ Gambar di bawah menunjukkan **heatmap korelasi** antara tiga fitur numerik dalam
 Seluruh fitur numerik menunjukkan hubungan yang cukup kuat satu sama lain, yang mengindikasikan bahwa performa akademik siswa di satu mata pelajaran cenderung sejalan dengan mata pelajaran lainnya. Korelasi ini bisa menjadi pertimbangan dalam proses feature selection atau ketika mengembangkan model prediktif.
 
 ## Data Preparation
-Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
+Pada tahap ini dilakukan beberapa proses persiapan data sebelum digunakan dalam pemodelan. Proses-proses tersebut dilakukan secara berurutan untuk memastikan data dalam kondisi yang optimal. Berikut adalah tahapan-tahapan data preparation yang telah dilakukan:
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan proses data preparation yang dilakukan
-- Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
+### Encoding Fitur Kategorikal
+```
+education_categories = [
+    'some high school',
+    'high school',
+    'associate\'s degree',
+    'some college',
+    'bachelor\'s degree',
+    'master\'s degree'
+]
+oe = OrdinalEncoder(categories=[education_categories])
+df_score_enc['parental level of education'] = oe.fit_transform(df_score_enc[['parental level of education']])
+df_score_enc = pd.get_dummies(df_score_enc, columns=['gender', 'race/ethnicity', 'lunch', 'test preparation course'])
+```
+**Ordinal Encoding** diterapkan pada kolom `parental level of education` karena memiliki sifat ordinal, di mana tingkat pendidikan dapat diasumsikan memiliki urutan tertentu. Sementara itu, kolom-kolom seperti `gender`, `race/ethnicity`, `lunch`, dan `test preparation course` dikonversi menggunakan **One-Hot Encoding** karena bersifat nominal atau tidak memiliki urutan. Hasil encoding ini memungkinkan seluruh fitur kategorikal diubah ke dalam format numerik yang sesuai untuk proses modeling.
 
 ## Modeling
 Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
