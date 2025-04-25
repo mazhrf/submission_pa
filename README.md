@@ -57,8 +57,63 @@ Selain itu, dataset ini **tidak memiliki missing value**, sehingga tidak diperlu
 - `reading score` : nilai ujian membaca dengan rentang skor `0–100`.
 - `writing score` : nilai ujian menulis dengan rentang skor `0–100`.
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
+**Exploratory Data Analysis**:
+## Analisis Fitur Kategorikal
+
+Berikut adalah nilai unik dan distribusi frekuensi dari masing-masing fitur kategorikal dalam dataset:
+
+### 1. Gender
+Kolom `gender` memiliki 2 kategori:
+- **female**: 510 siswa
+- **male**: 478 siswa
+
+Distribusi cukup seimbang antara siswa laki-laki dan perempuan, dengan sedikit lebih banyak siswa perempuan.
+
+
+### 2. Race/Ethnicity
+Kolom `race/ethnicity` terdiri dari 5 kelompok:
+- **group C**: 316 siswa
+- **group D**: 261 siswa
+- **group B**: 184 siswa
+- **group E**: 139 siswa
+- **group A**: 88 siswa
+
+Kelompok etnis dengan jumlah terbanyak adalah **group C**, sedangkan yang paling sedikit adalah **group A**.
+
+---
+
+### 3. Parental Level of Education
+Kolom `parental level of education` memiliki 6 kategori:
+- **some college**: 222 siswa
+- **associate's degree**: 221 siswa
+- **high school**: 193 siswa
+- **some high school**: 175 siswa
+- **bachelor's degree**: 118 siswa
+- **master's degree**: 59 siswa
+
+Mayoritas orang tua siswa memiliki latar belakang pendidikan menengah hingga diploma. Hanya sebagian kecil yang mencapai gelar master.
+
+---
+
+### 4. Lunch
+Kolom `lunch` memiliki 2 jenis:
+- **standard**: 643 siswa
+- **free/reduced**: 345 siswa
+
+Sebagian besar siswa menerima makan siang standar. Namun, jumlah siswa yang menerima subsidi juga cukup besar.
+
+---
+
+### 5. Test Preparation Course
+Kolom `test preparation course` terdiri dari:
+- **none**: 631 siswa
+- **completed**: 357 siswa
+
+Mayoritas siswa tidak mengikuti kursus persiapan ujian, sementara sebagian lainnya telah menyelesaikannya.
+
+---
+
+Analisis ini membantu untuk memahami persebaran data kategorikal yang bisa memengaruhi performa model klasifikasi atau prediksi.
 
 ## Data Preparation
 Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
