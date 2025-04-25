@@ -363,4 +363,3 @@ Dari hasil di atas, dapat disimpulkan bahwa model **XGBoost** dan **Random Fores
 2. Dicoding. Diakses pada 21 April dari https://www.dicoding.com/academies/319-machine-learning-terapan
 3. Galina Deeva, Johannes De Smedt, Cecilia Saint-Pierre, Richard Weber, Jochen De Weerdt. *"A Novel Machine Learning Algorithm"*. Diakses pada 23 April 2025 dari https://arxiv.org/abs/2208.07749
 4. Syukrul Hamdi, Agus Maman Abadi. *"Jurnal Penelitian dan Pengembangan Manajemen Pendidikan"*. Diakses pada 23 April 2025 dari https://journal.uny.ac.id/index.php/jrpm/article/view/2666
-
