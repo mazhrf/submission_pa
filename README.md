@@ -47,7 +47,7 @@ Berdasarkan eksplorasi awal, terdapat:
 
 Selain itu, dataset ini **tidak memiliki missing value**, sehingga tidak diperlukan proses imputasi atau penanganan data kosong dalam tahap preprocessing awal.
 
-### Berdasarkan hasil eksplorasi menggunakan `.info()`, dataset ini memiliki 8 kolom, yaitu:
+### Deskripsi Variabel:
 - `gender` : jenis kelamin siswa, terdiri dari `male` dan `female`.
 - `race/ethnicity` : ras atau etnis siswa, dikategorikan dari `group A` hingga `group E`.
 - `parental level of education` : tingkat pendidikan tertinggi yang dicapai oleh orang tua siswa.
