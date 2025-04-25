@@ -177,15 +177,68 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 ```
 
-**Data Splitting** bertujuan untuk memisahkan dataset menjadi dua bagian: data latih (training set) dan data uji (test set).
+**Data Splitting** bertujuan untuk memisahkan dataset menjadi dua bagian: data latih (80% training set) dan data uji (20% test set).
 
 ## Modeling
-Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
+Pada tahap ini dilakukan proses pemodelan menggunakan beberapa algoritma machine learning untuk menyelesaikan masalah klasifikasi tingkat kemampuan membaca (`reading_cat`). Model-model yang digunakan antara lain:
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan kelebihan dan kekurangan dari setiap algoritma yang digunakan.
-- Jika menggunakan satu algoritma pada solution statement, lakukan proses improvement terhadap model dengan hyperparameter tuning. **Jelaskan proses improvement yang dilakukan**.
-- Jika menggunakan dua atau lebih algoritma pada solution statement, maka pilih model terbaik sebagai solusi. **Jelaskan mengapa memilih model tersebut sebagai model terbaik**.
+### 1. **Extreme Gradient Boosting (XGBoost)**
+
+**Deskripsi:**  
+XGBoost adalah algoritma boosting yang menggabungkan banyak pohon keputusan secara iteratif untuk memperbaiki kesalahan dari model sebelumnya. XGBoost terkenal karena efisiensinya dan performa yang tinggi, terutama pada dataset yang kompleks dan besar.
+
+**Kelebihan:**
+- Performa prediksi yang sangat baik, terutama untuk data tabular.
+- Mampu menangani missing value secara otomatis.
+- Mendukung paralelisasi sehingga proses training menjadi lebih cepat.
+- Memiliki berbagai parameter tuning untuk meningkatkan akurasi.
+
+**Kekurangan:**
+- Cenderung kompleks dan memerlukan tuning parameter yang cukup banyak.
+- Interpretasi model tidak sesederhana model linear atau decision tree tunggal.
+
+### 2. **Naive Bayes (NB)**
+
+**Deskripsi:**  
+Naive Bayes adalah algoritma klasifikasi berbasis probabilistik yang menggunakan Teorema Bayes dengan asumsi independensi antar fitur.
+
+**Kelebihan:**
+- Cepat dalam proses training dan prediksi.
+- Performa baik pada dataset dengan fitur independen.
+- Cocok untuk klasifikasi teks dan data bersifat kategorikal.
+
+**Kekurangan:**
+- Asumsi independensi antar fitur jarang terpenuhi dalam praktik.
+- Tidak cocok untuk fitur yang sangat berkorelasi.
+
+### 3. **Random Forest (RF)**
+
+**Deskripsi:**  
+Random Forest adalah algoritma ensemble yang membentuk banyak pohon keputusan (decision tree) dan menggabungkan hasilnya untuk meningkatkan akurasi dan mengurangi overfitting.
+
+**Kelebihan:**
+- Mengurangi risiko overfitting dibandingkan decision tree tunggal.
+- Dapat menangani data numerik maupun kategorikal.
+- Memberikan estimasi pentingnya fitur (feature importance).
+
+**Kekurangan:**
+- Model lebih besar dan lebih lambat dibandingkan decision tree tunggal.
+- Interpretasi tidak semudah model yang lebih sederhana.
+
+### 4. **Support Vector Machine (SVM)**
+
+**Deskripsi:**  
+SVM bekerja dengan mencari hyperplane terbaik yang memisahkan data antar kelas dengan margin maksimal.
+
+**Kelebihan:**
+- Efektif pada dataset berdimensi tinggi.
+- Dapat digunakan untuk klasifikasi linear maupun non-linear (dengan kernel trick).
+- Robust terhadap outlier jika menggunakan kernel yang tepat.
+
+**Kekurangan:**
+- Kurang efisien pada dataset besar (komputasi mahal).
+- Memerlukan tuning parameter seperti C dan kernel yang sesuai.
+- Kurang interpretatif dibandingkan model berbasis pohon.
 
 ## Evaluation
 Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
