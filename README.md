@@ -2,8 +2,11 @@
 
 ## Domain Proyek
 
-Proyek ini berfokus pada analisis kinerja siswa dalam ujian matematika, membaca, dan menulis. 
-Data yang digunakan berasal dari dataset **"Students Performance in Exams"** yang tersedia di [Kaggle](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams) . 
+Proyek ini berfokus pada bidang pendidikan dengan menganalisa kinerja siswa dalam ujian matematika, membaca, dan menulis. 
+Data yang digunakan berasal dari dataset **"Students Performance in Exams"** yang tersedia di [Kaggle](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams). 
+
+![belajar](https://media.istockphoto.com/id/1260413500/id/foto/anak-anak-belajar-di-luar-ruangan-di-taman.jpg?s=170667a&w=0&k=20&c=sDsnoLgmJst_oBx0y0oXkdsAi3CYjMbHRKtA0c6buIQ=)
+
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Jelaskan mengapa dan bagaimana masalah tersebut harus diselesaikan
