@@ -31,20 +31,23 @@ Tujuan dari proyek ini:
 - Melakukan analisis data, baik secara _univariate_ maupun _multivariate_, untuk memahami distribusi dan hubungan antar variabel. Visualisasi data digunakan untuk menggali pola dan mendeteksi _outlier_, serta mengidentifikasi korelasi antar fitur. Proses ini membantu dalam memahami karakteristik data yang akan mempengaruhi hasil prediksi.
 - Data _cleaning_ dilakukan untuk menangani nilai yang hilang, data yang tidak konsisten, dan _outlier_.
 - Berbagai model machine learning dikembangkan dan dievaluasi untuk memilih model terbaik dalam memprediksi hasil ujian siswa. Beberapa algoritma yang digunakan dalam proyek ini antara lain:
-    * _Extreme Gradient Boosting_ (XGB): Algoritma gradient boosting yang efisien dan sangat populer dalam tugas klasifikasi. menggunakan pendekatan ensemble untuk meningkatkan akurasi model dan sangat baik dalam menangani data dengan banyak fitur.
-    * _Naive Bayes_ (NB): Model probabilistik yang menggunakan teorema Bayes untuk klasifikasi, yang bekerja dengan asumsi independensi antar fitur.
-    * _Random Forest_ (RF): Sebuah metode ensemble yang menggunakan banyak pohon keputusan untuk menghasilkan prediksi yang lebih akurat. Efektif dalam menangani data yang kompleks dan dapat digunakan untuk klasifikasi dan regresi
-    * _Support Vector Machine_ (SVM): Algoritma yang mencari hyperplane untuk memisahkan kelas data secara optimal. Cocok untuk masalah klasifikasi dengan margin yang jelas antara kelas.
+    * **_Extreme Gradient Boosting_ (XGB)**: Algoritma gradient boosting yang efisien dan sangat populer. menggunakan pendekatan ensemble untuk meningkatkan akurasi model dan sangat baik dalam menangani data dengan banyak fitur.
+    * **_Naive Bayes_ (NB)**: Model probabilistik yang menggunakan teorema Bayes, yang bekerja dengan asumsi independensi antar fitur.
+    * **_Random Forest_ (RF)**: Sebuah metode ensemble yang menggunakan banyak pohon keputusan untuk menghasilkan prediksi yang lebih akurat.
+    * **_Support Vector Machine_** (SVM): Algoritma yang mencari hyperplane untuk memisahkan kelas data secara optimal.
 
 ## Data Understanding
-Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Restaurant+%26+consumer+data).
-
-Selanjutnya uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:  
+Pada proyek ini, data yang digunakan berasal dari [Kaggle](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams). Dataset ini berisi informasi tentang hasil ujian siswa dalam tiga mata pelajaran, serta beberapa atribut demografis siswa.
 
 ### Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
-- accepts : merupakan jenis pembayaran yang diterima pada restoran tertentu.
-- cuisine : merupakan jenis masakan yang disajikan pada restoran.
-- dst
+- `gender` : jenis kelamin siswa, terdiri dari `male` dan `female`.
+- `race/ethnicity` : ras atau etnis siswa, dikategorikan dari `group A` hingga `group E`.
+- `parental level of education` : tingkat pendidikan tertinggi yang dicapai oleh orang tua siswa.
+- `lunch` : jenis makan siang yang diterima siswa, yaitu `standard` atau `free/reduced`.
+- `test preparation course` : status keikutsertaan siswa dalam program persiapan ujian, `completed` atau `none`.
+- `math score` : nilai ujian matematika dengan rentang skor `0–100`.
+- `reading score` : nilai ujian membaca dengan rentang skor `0–100`.
+- `writing score` : nilai ujian menulis dengan rentang skor `0–100`.
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
