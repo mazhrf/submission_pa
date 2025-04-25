@@ -106,6 +106,8 @@ Kolom `test preparation course` terdiri dari:
 
 Mayoritas siswa tidak mengikuti kursus persiapan ujian, sementara sebagian lainnya telah menyelesaikannya.
 
+![kategorikal](https://github.com/user-attachments/assets/2f6884c6-2b90-4818-9e6b-5a098f90fb86)
+
 ## Data Preparation
 Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
 
