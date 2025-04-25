@@ -337,12 +337,24 @@ Kesimpulan:
 #### 4. **F1 Score**
 
 **F1-score** adalah harmonisasi antara precision dan recall, terutama digunakan ketika distribusi data tidak seimbang.
-```
+$$
 \[
 \text{F1-score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
 \]
-```
-**Interpretasi:** F1-score memberikan keseimbangan antara menghindari false positive dan false negative.
+$$
+
+### Hasil Evaluasi Model
+
+Setelah dilakukan pelatihan dan pengujian model menggunakan data uji, didapatkan metrik evaluasi sebagai berikut:
+
+| Model         | Accuracy | Precision | Recall | F1 Score |
+|---------------|----------|-----------|--------|----------|
+| XGBoost       | 1.00     | 1.00      | 1.00   | 1.00     |
+| Naive Bayes   | 0.71     | 0.71      | 0.71   | 0.70     |
+| Random Forest | 1.00     | 1.00      | 1.00   | 1.00     |
+| SVM           | 0.94     | 0.95      | 0.94   | 0.94     |
+
+Dari hasil di atas, dapat disimpulkan bahwa model **XGBoost** dan **Random Forest** memberikan performa terbaik dibandingkan model lainnya berdasarkan metrik yang digunakan.
 
 _Catatan:_
 - _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
