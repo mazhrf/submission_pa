@@ -241,18 +241,65 @@ SVM bekerja dengan mencari hyperplane terbaik yang memisahkan data antar kelas d
 - Kurang interpretatif dibandingkan model berbasis pohon.
 
 ## Evaluation
-Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
+Pada tahap ini dilakukan evaluasi terhadap performa model menggunakan beberapa metrik evaluasi klasifikasi, yaitu **accuracy**, **precision**, **recall**, dan **F1-score**. Pemilihan metrik ini disesuaikan dengan konteks permasalahan klasifikasi dalam proyek ini, yang bertujuan mengklasifikasikan skor membaca siswa ke dalam tiga kategori: Low, Medium, dan High.
 
-Sebagai contoh, Anda memiih kasus klasifikasi dan menggunakan metrik **akurasi, precision, recall, dan F1 score**. Jelaskan mengenai beberapa hal berikut:
-- Penjelasan mengenai metrik yang digunakan
-- Menjelaskan hasil proyek berdasarkan metrik evaluasi
+### Confusion Matrix
 
-Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
+**Confusion Matrix** adalah sebuah tabel yang digunakan untuk mengevaluasi performa model klasifikasi. Tabel ini menunjukkan jumlah prediksi yang benar dan salah yang dilakukan oleh model dibandingkan dengan nilai aktual.
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
+Berikut adalah elemen penting dalam confusion matrix:
 
-**---Ini adalah bagian akhir laporan---**
+- **True Positive (TP):** Model memprediksi positif, dan sebenarnya memang positif.
+- **True Negative (TN):** Model memprediksi negatif, dan sebenarnya memang negatif.
+- **False Positive (FP):** Model memprediksi positif, tapi sebenarnya negatif. *(Type I Error)*
+- **False Negative (FN):** Model memprediksi negatif, tapi sebenarnya positif. *(Type II Error)*
+
+![cm](https://github.com/user-attachments/assets/799a95c9-8427-44af-85e0-85ee53f5d723)
+
+**XGBoost**
+
+| Class  | TP  | TN  | FP | FN |
+|:------:|:---:|:---:|:--:|:--:|
+| Low    | 39  | 159 |  0 |  0 |
+| Medium | 68  | 130 |  0 |  0 |
+| High   | 91  | 107 |  0 |  0 |
+
+&nbsp;
+
+**Naive Bayes**
+
+| Class  | TP  | TN  | FP | FN |
+|:------:|:---:|:---:|:--:|:--:|
+| Low    | 39  | 159 |  0 |  0 |
+| Medium | 27  | 114 | 16 | 41 |
+| High   | 75  |  66 | 41 | 16 |
+
+&nbsp;
+
+**Random Forest**
+
+| Class  | TP  | TN  | FP | FN |
+|:------:|:---:|:---:|:--:|:--:|
+| Low    | 39  | 159 |  0 |  0 |
+| Medium | 68  | 130 |  0 |  0 |
+| High   | 91  | 107 |  0 |  0 |
+
+&nbsp;
+
+**SVM**
+
+| Class  | TP  | TN  | FP | FN |
+|:------:|:---:|:---:|:--:|:--:|
+| Low    | 39  | 159 |  0 |  0 |
+| Medium | 60  | 123 |  3 |  8 |
+| High   | 88  |  99 |  8 |  3 |
+
+&nbsp;
+
+Kesimpulan:
+- **XGBoost** dan **Random Forest**: performa sempurna.
+- **SVM**: performa cukup baik, ada sedikit kesalahan.
+- **Naive Bayes**: paling banyak error dalam memprediksi kelas Medium dan High.
 
 _Catatan:_
 - _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
