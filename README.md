@@ -355,7 +355,8 @@ Setelah dilakukan pelatihan dan pengujian model menggunakan data uji, didapatkan
 
 Dari hasil di atas, dapat disimpulkan bahwa model **XGBoost** dan **Random Forest** memberikan performa terbaik dibandingkan model lainnya berdasarkan metrik yang digunakan.
 
-_Catatan:_
-- _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
-- Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
+![eval](https://github.com/user-attachments/assets/32643b12-9faa-4359-b264-b793e6bac06d)
 
+
+## Referensi
+1. Dicoding. Diakses pada 6 Juli 2024 dari https://www.dicoding.com/academies/319-machine-learning-terapan
