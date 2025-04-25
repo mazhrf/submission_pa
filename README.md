@@ -167,6 +167,18 @@ Variabel `reading_cat` merupakan hasil kategorisasi dari nilai `reading score` p
 * Medium: **Nilai `60 < score ≤ 80`**
 * High: **Nilai `80 < score ≤ 100`**
 
+### Split Data (Training dan Testing)
+```
+X = df_score_enc.drop('reading score', axis=1)
+y = df_score_enc['reading_cat']
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42,
+)
+```
+
+**Data Splitting** bertujuan untuk memisahkan dataset menjadi dua bagian: data latih (training set) dan data uji (test set).
+
 ## Modeling
 Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
 
