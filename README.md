@@ -108,6 +108,17 @@ Mayoritas siswa tidak mengikuti kursus persiapan ujian, sementara sebagian lainn
 
 ![kategorikal](https://github.com/user-attachments/assets/2f6884c6-2b90-4818-9e6b-5a098f90fb86)
 
+#### Analisis Fitur Numerik
+
+Gambar di bawah menunjukkan **heatmap korelasi** antara tiga fitur numerik dalam dataset, yaitu `math score`, `reading score`, dan `writing score`.
+
+![numerik](https://github.com/user-attachments/assets/a1cbc6f8-dd04-43ef-b76d-a019d194df89)
+
+- **Reading score dan writing score** memiliki korelasi yang sangat kuat sebesar **0.95**, yang menunjukkan bahwa siswa yang baik dalam membaca cenderung juga baik dalam menulis.
+- **Math score** juga memiliki korelasi positif yang kuat dengan **reading score (0.80)** dan **writing score (0.78)**, meskipun sedikit lebih rendah dibandingkan korelasi antara reading dan writing.
+
+Seluruh fitur numerik menunjukkan hubungan yang cukup kuat satu sama lain, yang mengindikasikan bahwa performa akademik siswa di satu mata pelajaran cenderung sejalan dengan mata pelajaran lainnya. Korelasi ini bisa menjadi pertimbangan dalam proses feature selection atau ketika mengembangkan model prediktif.
+
 ## Data Preparation
 Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
 
