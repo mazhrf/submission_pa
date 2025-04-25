@@ -307,41 +307,41 @@ Kesimpulan:
 #### 1. **Accuracy**
 
 **Accuracy** mengukur proporsi prediksi yang benar terhadap total jumlah data.
-
+```
 \[
 \text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
 \]
-
+```
 **Interpretasi:** Metrik ini cocok digunakan ketika distribusi kelas seimbang. Namun, jika data tidak seimbang, accuracy bisa menyesatkan.
 
 #### 2. **Precision**
 
 **Precision** mengukur seberapa banyak prediksi positif yang benar-benar positif.
-
+```
 \[
 \text{Precision} = \frac{TP}{TP + FP}
 \]
-
+```
 **Interpretasi:** Metrik ini penting ketika biaya dari false positive cukup besar, seperti dalam kasus deteksi spam atau penyakit.
 
 #### 3. **Recall**
 
 **Recall** (atau Sensitivity) mengukur seberapa banyak data positif yang berhasil ditemukan oleh model.
-
+```
 \[
 \text{Recall} = \frac{TP}{TP + FN}
 \]
-
+```
 **Interpretasi:** Recall penting dalam konteks di mana false negative lebih berbahaya, misalnya dalam diagnosa medis.
 
 #### 4. **F1 Score**
 
 **F1-score** adalah harmonisasi antara precision dan recall, terutama digunakan ketika distribusi data tidak seimbang.
-
+```
 \[
 \text{F1-score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
 \]
-
+```
 **Interpretasi:** F1-score memberikan keseimbangan antara menghindari false positive dan false negative.
 
 _Catatan:_
