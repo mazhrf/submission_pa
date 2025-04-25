@@ -39,7 +39,15 @@ Tujuan dari proyek ini:
 ## Data Understanding
 Pada proyek ini, data yang digunakan berasal dari [Kaggle](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams). Dataset ini berisi informasi tentang hasil ujian siswa dalam tiga mata pelajaran, serta beberapa atribut demografis siswa.
 
-### Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
+Dataset yang digunakan berformat CSV (Comma-Separated Values) dan terdiri dari **1.000 sampel (baris)** dengan **8 fitur (kolom)**.
+
+Berdasarkan eksplorasi awal, terdapat:
+- **3 fitur numerik** bertipe `int64`, yaitu: `math score`, `reading score`, dan `writing score`.
+- **5 fitur kategorikal** bertipe `object`, yaitu: `gender`, `race/ethnicity`, `parental level of education`, `lunch`, dan `test preparation course`.
+
+Selain itu, dataset ini **tidak memiliki missing value**, sehingga tidak diperlukan proses imputasi atau penanganan data kosong dalam tahap preprocessing awal.
+
+### Berdasarkan hasil eksplorasi menggunakan `.info()`, dataset ini memiliki 8 kolom, yaitu:
 - `gender` : jenis kelamin siswa, terdiri dari `male` dan `female`.
 - `race/ethnicity` : ras atau etnis siswa, dikategorikan dari `group A` hingga `group E`.
 - `parental level of education` : tingkat pendidikan tertinggi yang dicapai oleh orang tua siswa.
