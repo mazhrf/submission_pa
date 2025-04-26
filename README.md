@@ -360,7 +360,7 @@ Dari hasil di atas, dapat disimpulkan bahwa model **XGBoost** dan **Random Fores
 
 
 ## Referensi
-1. Badan Pusat Statistik. *Statistik Pendidikan 2023*. Diakses pada 25 April 2025 dari https://www.bps.go.id/id/publication/2023/11/24/54557f7c1bd32f187f3cdab5/statistik-pendidikan-2023.html
-2. Dicoding. Diakses pada 21 April dari https://www.dicoding.com/academies/319-machine-learning-terapan
-3. Galina Deeva, Johannes De Smedt, Cecilia Saint-Pierre, Richard Weber, Jochen De Weerdt. *"A Novel Machine Learning Algorithm"*. Diakses pada 23 April 2025 dari https://arxiv.org/abs/2208.07749
-4. Syukrul Hamdi, Agus Maman Abadi. *"Jurnal Penelitian dan Pengembangan Manajemen Pendidikan"*. Diakses pada 23 April 2025 dari https://journal.uny.ac.id/index.php/jrpm/article/view/2666
+1. Hamdi, S., & Abadi, A. M. (n.d.). Jurnal Penelitian dan Pengembangan Manajemen Pendidikan. https://journal.uny.ac.id/index.php/jrpm/article/view/2666
+2. Deeva, G., De Smedt, J., Saint-Pierre, C., Weber, R., & De Weerdt, J. (2022). A novel machine learning algorithm. arXiv. https://arxiv.org/abs/2208.07749
+3. Badan Pusat Statistik. (2023). Statistik Pendidikan 2023. https://www.bps.go.id/id/publication/2023/11/24/54557f7c1bd32f187f3cdab5/statistik-pendidikan-2023.html
+4. Dicoding. (n.d.). Machine Learning Terapan. https://www.dicoding.com/academies/319-machine-learning-terapan
