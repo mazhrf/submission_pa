@@ -219,6 +219,9 @@ XGBoost adalah algoritma boosting yang menggabungkan banyak pohon keputusan seca
 **Deskripsi:**  
 Naive Bayes adalah algoritma klasifikasi berbasis probabilistik yang menggunakan Teorema Bayes dengan asumsi independensi antar fitur.
 
+**Parameter:**  
+Tidak ada parameter khusus yang digunakan dalam contoh ini. `BernoulliNB()` digunakan dengan pengaturan default dari library scikit-learn, yang biasanya sudah cukup baik untuk baseline model.
+
 **Kelebihan:**
 - Cepat dalam proses training dan prediksi.
 - Performa baik pada dataset dengan fitur independen.
@@ -233,6 +236,19 @@ Naive Bayes adalah algoritma klasifikasi berbasis probabilistik yang menggunakan
 **Deskripsi:**  
 Random Forest adalah algoritma ensemble yang membentuk banyak pohon keputusan (decision tree) dan menggabungkan hasilnya untuk meningkatkan akurasi dan mengurangi overfitting.
 
+**Parameter:**
+- **n_estimators = 200**  
+  Menentukan jumlah pohon keputusan yang akan dibuat dalam hutan. Semakin banyak pohon, model biasanya menjadi lebih stabil, tetapi juga lebih lambat untuk dilatih dan diprediksi.
+
+- **criterion = "entropy"**  
+  Mengatur fungsi yang digunakan untuk mengukur kualitas split di setiap node. "Entropy" menggunakan konsep informasi dari teori informasi untuk memaksimalkan ketidakpastian yang dikurangi setelah split (lebih akurat dibandingkan "gini" pada kasus tertentu).
+
+- **max_depth = 10**  
+  Batas maksimum kedalaman setiap pohon. Membatasi kedalaman bisa membantu menghindari overfitting dan membuat model lebih cepat.
+
+- **random_state = 42**  
+  Seed untuk generator angka acak, memastikan bahwa hasil model bersifat reproducible dan konsisten setiap kali dijalankan.
+
 **Kelebihan:**
 - Mengurangi risiko overfitting dibandingkan decision tree tunggal.
 - Dapat menangani data numerik maupun kategorikal.
@@ -246,6 +262,16 @@ Random Forest adalah algoritma ensemble yang membentuk banyak pohon keputusan (d
 
 **Deskripsi:**  
 SVM bekerja dengan mencari hyperplane terbaik yang memisahkan data antar kelas dengan margin maksimal.
+
+**Parameter:**
+- **kernel = 'rbf'**  
+  Kernel menentukan bentuk dari fungsi keputusan. `'rbf'` (Radial Basis Function) adalah kernel non-linear yang banyak digunakan untuk menangani kasus di mana data tidak dapat dipisahkan secara linear.
+
+- **gamma = 'auto'**  
+  Parameter gamma mempengaruhi bentuk keputusan model untuk kernel non-linear. Jika `'auto'`, gamma diset berdasarkan kebalikan jumlah fitur. Gamma mengontrol sejauh mana pengaruh satu contoh data. Gamma kecil berarti jauh, gamma besar berarti dekat.
+
+- **random_state = 42**  
+  Menetapkan seed random untuk membuat hasil model menjadi konsisten setiap kali dijalankan (digunakan untuk shuffle data internal dalam beberapa versi atau fungsi SVM).
 
 **Kelebihan:**
 - Efektif pada dataset berdimensi tinggi.
