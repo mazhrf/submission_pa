@@ -188,6 +188,22 @@ Pada tahap ini dilakukan proses pemodelan menggunakan beberapa algoritma machine
 **Deskripsi:**  
 XGBoost adalah algoritma boosting yang menggabungkan banyak pohon keputusan secara iteratif untuk memperbaiki kesalahan dari model sebelumnya. XGBoost terkenal karena efisiensinya dan performa yang tinggi, terutama pada dataset yang kompleks dan besar.
 
+**Parameter:**
+- **max_depth = 3**  
+  Menentukan kedalaman maksimum setiap pohon. Semakin besar nilainya, semakin kompleks model, namun berisiko overfitting.
+
+- **n_estimators = 200**  
+  Jumlah total pohon (model boosting stages) yang akan dibuat. Lebih banyak pohon biasanya meningkatkan akurasi sampai titik tertentu, tetapi juga meningkatkan waktu pelatihan.
+
+- **random_state = 42**  
+  Seed untuk generator angka acak. Ini memastikan bahwa hasil yang diperoleh dapat direproduksi (reproducible).
+
+- **learning_rate = 0.01**  
+  Juga dikenal sebagai shrinkage. Ini mengontrol seberapa banyak kontribusi setiap pohon baru terhadap model keseluruhan. Nilai kecil membuat model belajar lebih lambat namun bisa meningkatkan akurasi.
+
+- **n_jobs = -1**  
+  Mengatur jumlah CPU core yang digunakan selama pelatihan. Nilai `-1` berarti menggunakan semua core yang tersedia untuk mempercepat proses.
+
 **Kelebihan:**
 - Performa prediksi yang sangat baik, terutama untuk data tabular.
 - Mampu menangani missing value secara otomatis.
