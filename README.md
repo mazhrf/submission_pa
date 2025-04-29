@@ -6,7 +6,7 @@ Proyek ini berfokus pada bidang pendidikan dengan menganalisa kinerja siswa dala
 Data yang digunakan berasal dari dataset **"Students Performance in Exams"** yang tersedia di [Kaggle](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams). 
 
 ### Latar Belakang
-![pendidikan]()
+![pendidikan](assets/belajar.jpg)
 
 Pendidikan merupakan salah satu pilar utama dalam pembangunan sumber daya manusia yang berkualitas. Kinerja siswa dalam ujian sering kali digunakan sebagai indikator utama untuk menilai efektivitas proses pembelajaran dan untuk mengidentifikasi faktor-faktor yang mempengaruhi hasil belajar mereka. Berbagai penelitian telah menunjukkan bahwa faktor-faktor seperti motivasi belajar, _self-efficacy_, dan latar belakang pendidikan memiliki pengaruh signifikan terhadap prestasi akademik siswa.[[1](https://journal.uny.ac.id/index.php/jrpm/article/view/2666)]
 
@@ -107,13 +107,13 @@ Kolom `test preparation course` terdiri dari:
 
 Mayoritas siswa tidak mengikuti kursus persiapan ujian, sementara sebagian lainnya telah menyelesaikannya.
 
-![kategorikal]()
+![kategorikal](assets/kategorikal.png)
 
 #### Analisis Fitur Numerik
 
 Gambar di bawah menunjukkan **heatmap korelasi** antara tiga fitur numerik dalam dataset, yaitu `math score`, `reading score`, dan `writing score`.
 
-![numerik]()
+![numerik](assets/numerik.png)
 
 - **Reading score dan writing score** memiliki korelasi yang sangat kuat sebesar **0.95**, yang menunjukkan bahwa siswa yang baik dalam membaca cenderung juga baik dalam menulis.
 - **Math score** juga memiliki korelasi positif yang kuat dengan **reading score (0.80)** dan **writing score (0.78)**, meskipun sedikit lebih rendah dibandingkan korelasi antara reading dan writing.
@@ -297,7 +297,7 @@ Berikut adalah elemen penting dalam confusion matrix:
 - **False Positive (FP):** Model memprediksi positif, tapi sebenarnya negatif. *(Type I Error)*
 - **False Negative (FN):** Model memprediksi negatif, tapi sebenarnya positif. *(Type II Error)*
 
-![cm]()
+![cm](assets/cm.png)
 
 **XGBoost**
 
@@ -398,7 +398,7 @@ Setelah dilakukan pelatihan dan pengujian model menggunakan data uji, didapatkan
 
 Dari hasil di atas, dapat disimpulkan bahwa model **XGBoost** dan **Random Forest** memberikan performa terbaik dibandingkan model lainnya berdasarkan metrik yang digunakan.
 
-![eval]()
+![eval](assets/eval.png)
 
 
 ## Referensi
