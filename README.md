@@ -383,7 +383,7 @@ $$
 
 $$
 \text{F1-score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
-$$
+
 
 ### Hasil Evaluasi Model
 
